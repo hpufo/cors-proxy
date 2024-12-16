@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
   axios.get(req.query.target)
     .then((response) => {
       res.send(response.data);
-    });
+    })
+    .catch(e => console.log(e));
 });
 
 // Start the server
